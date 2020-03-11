@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutSystem", "..\Source\CheckoutSystem\CheckoutSystem\CheckoutSystem.csproj", "{86C0AE55-41E2-4E57-B44F-02C0C28D44BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckoutSystem", "..\Source\CheckoutSystem\CheckoutSystem\CheckoutSystem.csproj", "{86C0AE55-41E2-4E57-B44F-02C0C28D44BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutSystemTest", "..\Test\CheckoutSystemTest\CheckoutSystemTest.csproj", "{17C4CDF3-9C62-41DC-BF6E-9C46832198ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{86C0AE55-41E2-4E57-B44F-02C0C28D44BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C0AE55-41E2-4E57-B44F-02C0C28D44BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C0AE55-41E2-4E57-B44F-02C0C28D44BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C4CDF3-9C62-41DC-BF6E-9C46832198ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C4CDF3-9C62-41DC-BF6E-9C46832198ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C4CDF3-9C62-41DC-BF6E-9C46832198ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C4CDF3-9C62-41DC-BF6E-9C46832198ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
