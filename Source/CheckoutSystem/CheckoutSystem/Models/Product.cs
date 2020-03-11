@@ -10,6 +10,8 @@
 
         public string SKU { get; set; }
         public double UnitPrice { get; set; }
+        public MultiBuyOffer MultiBuyOffer { get; set; }
+        public bool IsMultiBuyOfferAvailable => null != MultiBuyOffer;
 
     }
 }
