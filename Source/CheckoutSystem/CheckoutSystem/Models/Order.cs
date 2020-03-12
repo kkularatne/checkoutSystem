@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CheckoutSystem.Models
@@ -21,13 +22,15 @@ namespace CheckoutSystem.Models
 
         private double CalculateTotalPrice()
         {
-            return OrderLines.Sum(orderLine => orderLine.Product.UnitPrice * orderLine.Quantity);
+            return Math.Round(OrderLines.Sum(orderLine => orderLine.Product.UnitPrice * orderLine.Quantity),2);
         }
 
         public double CalculatePriceWithOffers()
         {
-            double offerPrice = 0.0;
-            foreach (var orderLine in OrderLines)
+            var offerPrice = 0.0;
+            var groupedBySku = GroupedBySku();
+
+            foreach (var orderLine in groupedBySku)
             {
                 if (IsQualifyForMultiBuyOffer(orderLine))
                 {
@@ -40,7 +43,13 @@ namespace CheckoutSystem.Models
                 }
             }
 
-            return offerPrice;
+            return Math.Round(offerPrice, 2);
+        }
+
+        private List<OrderLine> GroupedBySku()
+        {
+            return OrderLines.GroupBy(order => order.Product.SKU).Select(s => new OrderLine
+                (s.First().Product,s.Sum(x => x.Quantity))).ToList();
         }
 
         private static bool IsQualifyForMultiBuyOffer(OrderLine orderLine)
