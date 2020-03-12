@@ -1,6 +1,6 @@
 # Checkout System
 
-This is ASP.NET Core 3.1 MVC application. 
+This is a ASP.NET Core 3.1 MVC application. 
 
 ## Installation
 
